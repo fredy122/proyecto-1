@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1CB592A-EC83-4EC6-8929-898053C204A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>comensando_proyecto</RootNamespace>
+    <AssemblyName>comensando proyecto</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin2">
+      <HintPath>C:\Users\DjFredy\Downloads\Componentes Graficos Vb2\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsArticulo.cs" />
+    <Compile Include="clsCliente.cs" />
+    <Compile Include="clsComprobante.cs" />
+    <Compile Include="clsCorte.cs" />
+    <Compile Include="clsEmpleado.cs" />
+    <Compile Include="frmBuscar_Corte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscar_Corte.Designer.cs">
+      <DependentUpon>frmBuscar_Corte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCorte_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCorte_Registrar.Designer.cs">
+      <DependentUpon>frmCorte_Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditar_Cliente.Designer.cs">
+      <DependentUpon>frmEditar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleado_Editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleado_Editar.Designer.cs">
+      <DependentUpon>frmEmpleado_Editar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ventana_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ventana_Principal.Designer.cs">
+      <DependentUpon>ventana_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscar_Articulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscar_Articulo.Designer.cs">
+      <DependentUpon>frmBuscar_Articulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArticulo_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArticulo_Registrar.Designer.cs">
+      <DependentUpon>frmArticulo_Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarClientes.Designer.cs">
+      <DependentUpon>frmBuscarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscar_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscar_Empleado.Designer.cs">
+      <DependentUpon>frmBuscar_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaja.Designer.cs">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCliente_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCliente_Registrar.Designer.cs">
+      <DependentUpon>frmCliente_Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleado_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleado_Registrar.Designer.cs">
+      <DependentUpon>frmEmpleado_Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVenta.Designer.cs">
+      <DependentUpon>frmVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBuscar_Corte.resx">
+      <DependentUpon>frmBuscar_Corte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCorte_Registrar.resx">
+      <DependentUpon>frmCorte_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditar_Cliente.resx">
+      <DependentUpon>frmEditar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleado_Editar.resx">
+      <DependentUpon>frmEmpleado_Editar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ventana_Principal.resx">
+      <DependentUpon>ventana_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscar_Articulo.resx">
+      <DependentUpon>frmBuscar_Articulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArticulo_Registrar.resx">
+      <DependentUpon>frmArticulo_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarClientes.resx">
+      <DependentUpon>frmBuscarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscar_Empleado.resx">
+      <DependentUpon>frmBuscar_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCaja.resx">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCliente_Registrar.resx">
+      <DependentUpon>frmCliente_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleado_Registrar.resx">
+      <DependentUpon>frmEmpleado_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVenta.resx">
+      <DependentUpon>frmVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6470716-Icono-de-candado-bot-n-3d-c-rculo-brillante-rojo--Foto-de-archivo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\write_document_23358.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kfloppy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\klipper.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kscreensaver.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xmag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\synaptic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_06.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_05.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_18.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_19.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editcut.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filefind.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16 %28Cut-2%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-offline.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\el-vintage-dise-barber-shop-32448822.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kedit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
