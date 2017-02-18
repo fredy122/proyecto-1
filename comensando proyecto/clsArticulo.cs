@@ -73,7 +73,7 @@ namespace comensando_proyecto
             {
                 if (value.Length > 30)
                 {
-                    throw new Exception("El codigo debe ser inferior a 12 caracteres.");
+                    throw new Exception("El codigo debe ser inferior a 15 caracteres.");
                 }
                 else if (string.IsNullOrWhiteSpace(value))
                 {
