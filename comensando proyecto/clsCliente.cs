@@ -126,9 +126,9 @@ namespace comensando_proyecto
             }
             set 
             {
-                if (value.Length > 18)
+                if (value.Length > 8)
                 {
-                    throw new Exception("El DNI No Debe Tener Mas de 18 Caracteres");
+                    throw new Exception("El DNI No Debe Tener Mas de 8 Caracteres");
                 }
                 _DNI = value; 
             }
@@ -160,6 +160,10 @@ namespace comensando_proyecto
                 if (value.Length > 50)
                 {
                     throw new Exception("El Correo No Debe Tener Mas de 50 Caracteres");
+                }
+                else if(string.IsNullOrWhiteSpace(value))  
+                {
+                    throw new Exception("El correo no puede quedar nulo");
                 }
                 _Correo = value; 
             }
