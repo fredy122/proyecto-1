@@ -161,10 +161,7 @@ namespace comensando_proyecto
                 {
                     throw new Exception("El Correo No Debe Tener Mas de 50 Caracteres");
                 }
-                else if(string.IsNullOrWhiteSpace(value))  
-                {
-                    throw new Exception("El correo no puede quedar nulo");
-                }
+                
                 _Correo = value; 
             }
         }
