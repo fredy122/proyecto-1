@@ -32,5 +32,29 @@ namespace comensando_proyecto
             
             
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mdliImgresar_Usuario.UsuarioConectado = clsEmpleado.Validar_Credenciales(txtUsuario.Text,
+                                        txtContraseña.Text);
+
+                if (mdliImgresar_Usuario.UsuarioConectado == null)
+                {
+                    MessageBox.Show("Usuario y/o clave incorrecto.");
+                }
+                else
+                {
+                    MessageBox.Show("Bienvenido a HUANCAYORK.");
+                    Close();
+                }
+            }
+            catch (Exception mierror)
+            {
+                MessageBox.Show(mierror.Message);
+
+            }
+        }
     }
 }

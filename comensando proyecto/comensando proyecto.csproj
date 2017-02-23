@@ -76,6 +76,7 @@
     <Compile Include="frmEmpleado_Editar.Designer.cs">
       <DependentUpon>frmEmpleado_Editar.cs</DependentUpon>
     </Compile>
+    <Compile Include="mdliImgresar_Usuario.cs" />
     <Compile Include="ventana_Principal.cs">
       <SubType>Form</SubType>
     </Compile>

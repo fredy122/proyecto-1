@@ -49,6 +49,11 @@ namespace comensando_proyecto
            
             Correo = parCorreo;
         }
+        public clsEmpleado(string parNombre, string parDNI)
+        {
+            Nombre = parNombre;
+            DNI = parDNI;
+        }
         
 
         public string DNI
@@ -307,6 +312,29 @@ namespace comensando_proyecto
             comando.ExecuteNonQuery();
             conexion.Close();
 
+        }
+        public static clsEmpleado Validar_Credenciales(string parNombres, string parDNI)
+        {
+            clsEmpleado x = null;
+            SqlConnection CONEXION;
+            CONEXION = new SqlConnection("SERVER=.;DATABASE=Barber_Shop_03;USER=sa;PWD=continental");
+
+            SqlCommand elComando;
+            elComando = new SqlCommand("usp_Usuario_Validar_Ingreso", CONEXION);
+            elComando.CommandType = System.Data.CommandType.StoredProcedure;
+            elComando.Parameters.AddWithValue("@parNombres", parNombres);
+            elComando.Parameters.AddWithValue("@parDNI", parDNI);
+            CONEXION.Open();
+            SqlDataReader contenedor;
+            contenedor = elComando.ExecuteReader();
+            while (contenedor.Read() == true)
+            {
+                x = new clsEmpleado(contenedor["Nombres"].ToString(),
+                                contenedor["DNI"].ToString());
+            }
+            CONEXION.Close();
+            CONEXION.Dispose();
+            return x;
         }
     }
 }
