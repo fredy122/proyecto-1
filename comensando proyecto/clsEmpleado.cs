@@ -317,7 +317,7 @@ namespace comensando_proyecto
         {
             clsEmpleado x = null;
             SqlConnection CONEXION;
-            CONEXION = new SqlConnection("SERVER=.;DATABASE=Barber_Shop_03;USER=sa;PWD=continental");
+            CONEXION = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
 
             SqlCommand elComando;
             elComando = new SqlCommand("usp_Usuario_Validar_Ingreso", CONEXION);
