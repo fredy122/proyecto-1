@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="clsArticulo.cs" />
     <Compile Include="clsCliente.cs" />
-    <Compile Include="clsComprobante.cs" />
+    <Compile Include="clsVenta.cs" />
     <Compile Include="clsCorte.cs" />
     <Compile Include="clsEmpleado.cs" />
     <Compile Include="frmBuscar_Corte.cs">

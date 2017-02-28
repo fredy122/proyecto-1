@@ -16,6 +16,9 @@ namespace comensando_proyecto
         private char _Sexo;            
         private DateTime _FechaNacimiento;
         private string _Correo;
+        private string _Usuario;
+        private string _TipoUsuario;
+        private string _Contrasena;
     
         public clsEmpleado (string parDNI,string parNombre,string parApellido,string parTelefono,
                             string parDireccion, char parSexo,DateTime parFechaNacimiento,string parCorreo)
@@ -322,15 +325,15 @@ namespace comensando_proyecto
             SqlCommand elComando;
             elComando = new SqlCommand("usp_Usuario_Validar_Ingreso", CONEXION);
             elComando.CommandType = System.Data.CommandType.StoredProcedure;
-            elComando.Parameters.AddWithValue("@parNombres", parNombres);
-            elComando.Parameters.AddWithValue("@parDNI", parDNI);
+            elComando.Parameters.AddWithValue("@parUsuario", parNombres);
+            elComando.Parameters.AddWithValue("@parcontrasena", parDNI);
             CONEXION.Open();
             SqlDataReader contenedor;
             contenedor = elComando.ExecuteReader();
             while (contenedor.Read() == true)
             {
-                x = new clsEmpleado(contenedor["Nombres"].ToString(),
-                                contenedor["DNI"].ToString());
+                x = new clsEmpleado(contenedor["Usuario"].ToString(),
+                                contenedor["Contrasena"].ToString());
             }
             CONEXION.Close();
             CONEXION.Dispose();

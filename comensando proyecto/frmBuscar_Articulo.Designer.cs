@@ -47,6 +47,9 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnListarTods = new System.Windows.Forms.Button();
             this.btnAceptarArticulo = new System.Windows.Forms.Button();
+            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // lstvDatos
@@ -214,6 +217,22 @@
             this.btnAceptarArticulo.UseVisualStyleBackColor = true;
             this.btnAceptarArticulo.Click += new System.EventHandler(this.btnAceptarArticulo_Click);
             // 
+            // nudCantidad
+            // 
+            this.nudCantidad.Location = new System.Drawing.Point(451, 31);
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(60, 20);
+            this.nudCantidad.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(390, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Cantidad :";
+            // 
             // frmBuscar_Articulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +240,8 @@
             this.BackgroundImage = global::comensando_proyecto.Properties.Resources.LOGO1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(847, 432);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.nudCantidad);
             this.Controls.Add(this.btnAceptarArticulo);
             this.Controls.Add(this.btnListarTods);
             this.Controls.Add(this.txtBuscar);
@@ -233,6 +254,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmBuscar_Articulo";
             this.Text = "frmArticulos";
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +281,7 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnListarTods;
         private System.Windows.Forms.Button btnAceptarArticulo;
+        private System.Windows.Forms.NumericUpDown nudCantidad;
+        private System.Windows.Forms.Label label1;
     }
 }

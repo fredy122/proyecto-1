@@ -32,7 +32,7 @@ namespace comensando_proyecto
             frmBuscar_Articulo x;
             x = new frmBuscar_Articulo();
             x.Show();
-
+           
             
         }
 

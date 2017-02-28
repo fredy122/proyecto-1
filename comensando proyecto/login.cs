@@ -47,7 +47,13 @@ namespace comensando_proyecto
                 else
                 {
                     MessageBox.Show("Bienvenido a HUANCAYORK.");
-                    Close();
+                    login i;
+                    i = new login();
+                    i.Close();
+                    
+                    ventana_Principal x;
+                    x = new ventana_Principal();
+                    x.ShowDialog();
                 }
             }
             catch (Exception mierror)
