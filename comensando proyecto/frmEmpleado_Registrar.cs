@@ -22,12 +22,12 @@ namespace comensando_proyecto
             clsEmpleado x;
             if (rbM.Checked == true)
             {
-                x = new clsEmpleado(txtDNI.Text, txtNombre.Text, txtApellidos.Text, txtTelefono.Text, txtDireccion.Text, 'M', Convert.ToDateTime(dtpFechaNac.Value), txtCorreo.Text);
+                x = new clsEmpleado(txtDNI.Text, txtNombre.Text, txtApellidos.Text, txtTelefono.Text, txtDireccion.Text, 'M', Convert.ToDateTime(dtpFechaNac.Value), txtCorreo.Text,txtUsuario.Text,cmbTipoUsuario.SelectedItem.ToString(),txtContrasena.Text);
 
             }
             else
             {
-                x = new clsEmpleado(txtDNI.Text, txtNombre.Text, txtApellidos.Text, txtTelefono.Text, txtDireccion.Text, 'F', Convert.ToDateTime(dtpFechaNac.Value), txtCorreo.Text);
+                x = new clsEmpleado(txtDNI.Text, txtNombre.Text, txtApellidos.Text, txtTelefono.Text, txtDireccion.Text, 'F', Convert.ToDateTime(dtpFechaNac.Value), txtCorreo.Text, txtUsuario.Text, cmbTipoUsuario.SelectedItem.ToString(), txtContrasena.Text);
             }
             
             x.Insertar_Empleado();

@@ -8,7 +8,7 @@ namespace comensando_proyecto
 {
     public class clsArticulo
     {
-        private string _Codigo;
+        
         private string _Nombre;
         private string _Lote;
         private string _Marca;
@@ -24,11 +24,11 @@ namespace comensando_proyecto
 
 
 
-         public clsArticulo(string parCodigo, string parNombre, string parLote, string parMarca, int parCantidad,
+         public clsArticulo(string parNombre, string parLote, string parMarca, int parCantidad,
                                     string parTipo, float parPrecioCompra, float parPrecioVenta,
                                      int parStock)
                 {
-                    Codigo = parCodigo;
+                    
                     Nombre = parNombre;
                     Lote = parLote;
                     Marca = parMarca;
@@ -41,11 +41,11 @@ namespace comensando_proyecto
 
                 }
 
-        public clsArticulo(string parCodigo,string parNombre, string parLote, string parMarca, int parCantidad,
+        public clsArticulo(string parNombre, string parLote, string parMarca, int parCantidad,
                             string parTipo, float parPrecioCompra, float parPrecioVenta,
                             DateTime parFechaCompra, int parStock, string parDescripcion)
         {
-            Codigo = parCodigo;
+            
             Nombre = parNombre;
             Lote = parLote;
             Marca = parMarca;
@@ -59,12 +59,7 @@ namespace comensando_proyecto
 
         }
 
-
-        public string Codigo
-        {
-            get { return _Codigo; }
-            set { _Codigo = value; }
-        }     
+   
         public string Nombre
         {
             get
@@ -202,7 +197,7 @@ namespace comensando_proyecto
 
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
-            comando.Parameters.AddWithValue("@parCodigoProd",Codigo);
+           
             comando.Parameters.AddWithValue("@parNombre", Nombre);
             comando.Parameters.AddWithValue("@parLote", Lote);
             comando.Parameters.AddWithValue("@parMarca", Marca);
@@ -246,8 +241,7 @@ namespace comensando_proyecto
             while (contenedor.Read() == true)
             {
                 clsArticulo miobjeto;
-                miobjeto = new clsArticulo(contenedor["Cod_Producto"].ToString(),
-                                            contenedor["Nombre"].ToString(),
+                miobjeto = new clsArticulo(  contenedor["Nombre"].ToString(),
                                              contenedor["Lote"].ToString(),
                                              contenedor["Marca"].ToString(),
                                              Convert.ToInt32(contenedor["Cantidad"]),
@@ -286,8 +280,7 @@ namespace comensando_proyecto
             while (contenedor.Read() == true)
             {
                 clsArticulo miobjeto;
-                miobjeto = new clsArticulo(contenedor["Cod_Producto"].ToString(), 
-                                            contenedor["Nombre"].ToString(),
+                miobjeto = new clsArticulo(  contenedor["Nombre"].ToString(),
                                              contenedor["Lote"].ToString(),
                                              contenedor["Marca"].ToString(),
                                              Convert.ToInt32(contenedor["Cantidad"]),

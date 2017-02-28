@@ -21,7 +21,7 @@ namespace comensando_proyecto
         {
             clsArticulo x;
 
-            x = new clsArticulo(txtIdarticulo.Text, txtNombre.Text, txtlote.Text, txtmarca.Text, Convert.ToInt32(nudcantidad.Value), txttipoarticulo.Text, Convert.ToByte(nudpreciocompra.Value),
+            x = new clsArticulo(txtNombre.Text, txtlote.Text, txtmarca.Text, Convert.ToInt32(nudcantidad.Value), txttipoarticulo.Text, Convert.ToByte(nudpreciocompra.Value),
                                 Convert.ToByte(nudprecioventa.Value), Convert.ToByte(nudstock.Value));
             x.Descripcion = txtdescripcion.Text;
 

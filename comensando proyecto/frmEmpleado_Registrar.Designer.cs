@@ -48,6 +48,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // rbF
@@ -83,7 +89,7 @@
             // 
             this.btnCancelar.Image = global::comensando_proyecto.Properties.Resources._001_05;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(206, 295);
+            this.btnCancelar.Location = new System.Drawing.Point(190, 412);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(76, 34);
             this.btnCancelar.TabIndex = 34;
@@ -95,7 +101,7 @@
             // 
             this.btnGuardar.Image = global::comensando_proyecto.Properties.Resources._001_06;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(124, 295);
+            this.btnGuardar.Location = new System.Drawing.Point(108, 412);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(76, 34);
             this.btnGuardar.TabIndex = 33;
@@ -237,13 +243,74 @@
             this.dtpFechaNac.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaNac.TabIndex = 39;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 294);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(88, 15);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Crear Usuario :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(12, 330);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 15);
+            this.label11.TabIndex = 41;
+            this.label11.Text = "Tipo Usuario :";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(12, 369);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(72, 15);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "Contraseña :";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(111, 292);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(171, 20);
+            this.txtUsuario.TabIndex = 43;
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(111, 364);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(171, 20);
+            this.txtContrasena.TabIndex = 44;
+            // 
+            // cmbTipoUsuario
+            // 
+            this.cmbTipoUsuario.FormattingEnabled = true;
+            this.cmbTipoUsuario.Items.AddRange(new object[] {
+            "ADMINISTRADOR",
+            "BARBERO"});
+            this.cmbTipoUsuario.Location = new System.Drawing.Point(111, 330);
+            this.cmbTipoUsuario.Name = "cmbTipoUsuario";
+            this.cmbTipoUsuario.Size = new System.Drawing.Size(171, 21);
+            this.cmbTipoUsuario.TabIndex = 45;
+            // 
             // frmEmpleado_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::comensando_proyecto.Properties.Resources.LOGO1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(389, 345);
+            this.ClientSize = new System.Drawing.Size(399, 458);
+            this.Controls.Add(this.cmbTipoUsuario);
+            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.dtpFechaNac);
             this.Controls.Add(this.rbF);
             this.Controls.Add(this.rbM);
@@ -294,5 +361,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.ComboBox cmbTipoUsuario;
     }
 }

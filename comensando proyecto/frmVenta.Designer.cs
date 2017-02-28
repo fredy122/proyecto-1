@@ -36,7 +36,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lstvDatosVenta = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
@@ -60,8 +59,8 @@
             this.btnBuscarCliene = new System.Windows.Forms.Button();
             this.cmbBarbero = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtComprobante = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.cmbTipoComprobante = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -115,7 +114,6 @@
             // 
             this.lstvDatosVenta.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
             this.lstvDatosVenta.FullRowSelect = true;
@@ -130,17 +128,12 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Cant";
-            this.columnHeader1.Width = 41;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Codigo";
-            this.columnHeader2.Width = 116;
+            this.columnHeader1.Width = 94;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Descripcion";
-            this.columnHeader3.Width = 169;
+            this.columnHeader3.Width = 197;
             // 
             // columnHeader4
             // 
@@ -339,6 +332,7 @@
             this.cmbBarbero.Name = "cmbBarbero";
             this.cmbBarbero.Size = new System.Drawing.Size(207, 21);
             this.cmbBarbero.TabIndex = 14;
+            this.cmbBarbero.SelectedIndexChanged += new System.EventHandler(this.cmbBarbero_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -349,13 +343,6 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Selecciona Barbero:";
             // 
-            // txtComprobante
-            // 
-            this.txtComprobante.Location = new System.Drawing.Point(480, 12);
-            this.txtComprobante.Name = "txtComprobante";
-            this.txtComprobante.Size = new System.Drawing.Size(100, 20);
-            this.txtComprobante.TabIndex = 16;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -365,6 +352,17 @@
             this.label11.TabIndex = 17;
             this.label11.Text = "Tipo De Comprobante:";
             // 
+            // cmbTipoComprobante
+            // 
+            this.cmbTipoComprobante.FormattingEnabled = true;
+            this.cmbTipoComprobante.Items.AddRange(new object[] {
+            "BOLETA",
+            "COMPROBANTE"});
+            this.cmbTipoComprobante.Location = new System.Drawing.Point(480, 10);
+            this.cmbTipoComprobante.Name = "cmbTipoComprobante";
+            this.cmbTipoComprobante.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoComprobante.TabIndex = 18;
+            // 
             // frmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,8 +370,8 @@
             this.BackgroundImage = global::comensando_proyecto.Properties.Resources.LOGO1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(779, 438);
+            this.Controls.Add(this.cmbTipoComprobante);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtComprobante);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbBarbero);
             this.Controls.Add(this.label6);
@@ -410,7 +408,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListView lstvDatosVenta;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label label2;
@@ -434,7 +431,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtApellidoCliente;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtComprobante;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cmbTipoComprobante;
     }
 }

@@ -78,9 +78,9 @@ namespace comensando_proyecto
             }
             else
             {
+                
                 int y = lstvDatosVenta.Items.Count;
-                lstvDatosVenta.Items.Add("1");
-                lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.Codigo);
+                lstvDatosVenta.Items.Add("1");                
                 lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.Nombre);
                 lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.PrecioVenta.ToString());
                 
@@ -98,13 +98,19 @@ namespace comensando_proyecto
             //}
             //else
             //{
+                
+                
             //    clsVenta x;
-            //    x = new clsVenta(txtComprobante.Text, Losbarberos[cmbBarbero.SelectedIndex], Convert.ToSingle(txtPrecioTotal.Text));
-            //    x.insertar_comprobante();
-            //    MessageBox.Show("Venta ingresada.");
+            //    x = new clsVenta(LosClientes[lstvDatosVenta.Items.ToString()],
+            //        MessageBox.Show("Venta ingresada.");
             //}
 
             
+        }
+
+        private void cmbBarbero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
       

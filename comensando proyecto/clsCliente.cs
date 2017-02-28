@@ -69,6 +69,12 @@ namespace comensando_proyecto
 
 
         }
+        public clsCliente(int parID)
+        {
+            ID_Cliente = parID;
+          
+        }
+        
 
 
         public int ID_Cliente

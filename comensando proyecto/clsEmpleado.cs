@@ -8,6 +8,8 @@ namespace comensando_proyecto
 {
     public class clsEmpleado
     {
+        private int _IDEmpleado;
+
         private string _DNI;
         private string _Nombre;
         private string _Apellido;
@@ -19,9 +21,11 @@ namespace comensando_proyecto
         private string _Usuario;
         private string _TipoUsuario;
         private string _Contrasena;
-    
+
+        //insertar
         public clsEmpleado (string parDNI,string parNombre,string parApellido,string parTelefono,
-                            string parDireccion, char parSexo,DateTime parFechaNacimiento,string parCorreo)
+                            string parDireccion, char parSexo,DateTime parFechaNacimiento,string parCorreo,string parUsuario,
+                            string parTipoUsuario,string parContrasena)
         {
             DNI = parDNI;
             Nombre = parNombre;
@@ -31,11 +35,16 @@ namespace comensando_proyecto
             Sexo = parSexo;
             FechaNacimiento = parFechaNacimiento;
             Correo = parCorreo;
+            Usuario = parUsuario;
+            TipoUsuario = parTipoUsuario;
+            Contrasena = parContrasena;
         }
 
-        public clsEmpleado(string parDNI, string parNombre, string parApellido
+        //listar
+        public clsEmpleado(int parIDEmpleado, string parDNI, string parNombre, string parApellido
                            , DateTime parFechaNacimiento, string parCorreo)
         {
+            IDEmpleado = parIDEmpleado;
             DNI = parDNI;
             Nombre = parNombre;
             Apellido = parApellido;
@@ -57,7 +66,12 @@ namespace comensando_proyecto
             Nombre = parNombre;
             DNI = parDNI;
         }
-        
+
+        public int IDEmpleado
+        {
+            get { return _IDEmpleado; }
+            set { _IDEmpleado = value; }
+        }
 
         public string DNI
         {
@@ -174,8 +188,6 @@ namespace comensando_proyecto
             set { _FechaNacimiento = value; }
         }
 
-        
-
         public string Correo
         {
             get
@@ -195,6 +207,26 @@ namespace comensando_proyecto
                 _Correo = value;
             }
         }
+
+
+        public string Usuario
+        {
+            get { return _Usuario; }
+            set { _Usuario = value; }
+        }
+
+        public string TipoUsuario
+        {
+            get { return _TipoUsuario; }
+            set { _TipoUsuario = value; }
+        }
+
+        public string Contrasena
+        {
+            get { return _Contrasena; }
+            set { _Contrasena = value; }
+        }
+
 
         public void Insertar_Empleado()
         {
@@ -219,6 +251,9 @@ namespace comensando_proyecto
             comando.Parameters.AddWithValue("@parCorreo", Correo);
             comando.Parameters.AddWithValue("@parSexo", Sexo);
             comando.Parameters.AddWithValue("@parFechaNacimiento", FechaNacimiento);
+            comando.Parameters.AddWithValue("@parUsuarrio",Usuario );
+            comando.Parameters.AddWithValue("@parTipoUsuario",TipoUsuario );
+            comando.Parameters.AddWithValue("@parContrasena", Contrasena);
             
 
             conexion.Open();
@@ -226,7 +261,7 @@ namespace comensando_proyecto
             conexion.Close(); 
         }
 
-        
+
         public static List<clsEmpleado> Buscar_Empleado_PorApellido(string parametroApellido)
         {
             List<clsEmpleado> x = new List<clsEmpleado>();
@@ -248,13 +283,14 @@ namespace comensando_proyecto
             {
 
                 clsEmpleado MiObjeto;
-                MiObjeto = new clsEmpleado(contenedor["DNI"].ToString(),
+                MiObjeto = new clsEmpleado(Convert.ToInt32(contenedor["Id_Empleado"].ToString()),
+                                            contenedor["DNI"].ToString(),
                                             contenedor["Nombres"].ToString(),
-                                            contenedor["Apellidos"].ToString(),                                           
+                                            contenedor["Apellidos"].ToString(),
                                             Convert.ToDateTime(contenedor["fechaNacimiento"]),
                                             contenedor["CorreoElectronico"].ToString());
-                                            
-                                            
+
+
 
                 x.Add(MiObjeto);
             }
@@ -282,7 +318,8 @@ namespace comensando_proyecto
             {
 
                 clsEmpleado MiObjeto;
-                MiObjeto = new clsEmpleado(contenedor["DNI"].ToString(),
+                MiObjeto = new clsEmpleado(Convert.ToInt32( contenedor["Id_Empleado"].ToString()),
+                                            contenedor["DNI"].ToString(),
                                             contenedor["Nombres"].ToString(),
                                             contenedor["Apellidos"].ToString(),
                                             Convert.ToDateTime(contenedor["fechaNacimiento"]),

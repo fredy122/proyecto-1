@@ -74,17 +74,18 @@ namespace comensando_proyecto
             comando.CommandType = System.Data.CommandType.StoredProcedure;
 
             comando.Parameters.AddWithValue("@parTipoComprobamte", TipoComprobante);
-            comando.Parameters.AddWithValue("@parDNIEmpleado" );
-            
-                      
-            
+            comando.Parameters.AddWithValue("@parIDEmpleado", Empleado.IDEmpleado);
+            comando.Parameters.AddWithValue("@parIDCliemte",Cliente.ID_Cliente);
             
 
-            
+
+
+
+
             conexion.Open();
             comando.ExecuteNonQuery();
-            conexion.Close(); 
- 
+            conexion.Close();
+
         }
 
 

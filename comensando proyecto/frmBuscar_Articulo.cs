@@ -45,7 +45,6 @@ namespace comensando_proyecto
                 ArticuloEncontrado.Add(ELEMENTO);
 
                 lstvDatos.Items.Add(contador.ToString());
-                lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Codigo);              
                 lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Nombre.ToString());
                 lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Marca.ToString());
                 lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Tipo.ToString());
@@ -89,13 +88,13 @@ namespace comensando_proyecto
 
                 ArticuloEncontrado.Clear();
                 int contador = 1;
+                int SumaTotal = 0;
                 foreach (clsArticulo ELEMENTO in clsArticulo.Listar_Articulo_Nombre(txtBuscar.Text))
                 {
 
                     ArticuloEncontrado.Add(ELEMENTO);
 
                     lstvDatos.Items.Add(contador.ToString());
-                    lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Codigo);
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Nombre.ToString());
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Marca.ToString());
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Tipo.ToString());
@@ -104,14 +103,16 @@ namespace comensando_proyecto
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.PrecioVenta.ToString());
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.FechaCompra.ToString());
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Descripcion.ToString());
+                    SumaTotal += ELEMENTO.PrecioVenta;
 
                     if (contador % 2 == 0)
                     {
                         lstvDatos.Items[contador - 1].BackColor = Color.Khaki;
                     }
                     contador = contador + 1;
-
+                    
                 }
+                
             }
         }
 
