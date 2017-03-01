@@ -12,6 +12,17 @@ namespace comensando_proyecto
 {
     public partial class frmVenta : Form
     {
+
+
+        private List<clsClientesDeVenta> _ClienteSeleccionadoVentas = new List<clsClientesDeVenta>();
+
+        public List<clsClientesDeVenta> ClienteSeleccionadoVentas
+        {
+            get { return _ClienteSeleccionadoVentas; }
+            set { _ClienteSeleccionadoVentas = value; }
+        }
+
+
         private List<clsEmpleado> _Losbarberos = new List<clsEmpleado>();
 
         public List<clsEmpleado> Losbarberos
@@ -27,6 +38,8 @@ namespace comensando_proyecto
             get { return _LosClientes; }
             set { _LosClientes = value; }
         }
+
+        
 
 
         public frmVenta()
@@ -90,20 +103,14 @@ namespace comensando_proyecto
 
         private void button7_Click(object sender, EventArgs e)
         {
+            
 
+            clsVenta nuevaVenta;
+            nuevaVenta = new clsVenta(Convert.ToString(cmbTipoComprobante.SelectedItem),Losbarberos[cmbBarbero.SelectedIndex]);
+            nuevaVenta.Guardar(ClienteSeleccionadoVentas);
+            MessageBox.Show("venta agregada satisfactoriamente.", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //if (cmbBarbero.SelectedIndex == -1)
-            //{
-            //    MessageBox.Show("Seleccione un barbero.");
-            //}
-            //else
-            //{
-                
-                
-            //    clsVenta x;
-            //    x = new clsVenta(LosClientes[lstvDatosVenta.Items.ToString()],
-            //        MessageBox.Show("Venta ingresada.");
-            //}
+            
 
             
         }
@@ -113,10 +120,12 @@ namespace comensando_proyecto
 
         }
 
-      
 
-                 
 
-       
+
+
+
+
+        
     }
 }

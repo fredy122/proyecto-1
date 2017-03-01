@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="clsArticulo.cs" />
     <Compile Include="clsCliente.cs" />
+    <Compile Include="clsClientesDeVenta.cs" />
     <Compile Include="clsVenta.cs" />
     <Compile Include="clsCorte.cs" />
     <Compile Include="clsEmpleado.cs" />
@@ -77,6 +78,7 @@
       <DependentUpon>frmEmpleado_Editar.cs</DependentUpon>
     </Compile>
     <Compile Include="mdliImgresar_Usuario.cs" />
+    <Compile Include="mdlVariables.cs" />
     <Compile Include="ventana_Principal.cs">
       <SubType>Form</SubType>
     </Compile>

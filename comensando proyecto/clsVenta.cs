@@ -8,6 +8,9 @@ namespace comensando_proyecto
 {
     public class clsVenta
     {
+        private int _Id_Venta;
+
+        
         private clsCliente _Cliente;
         private clsEmpleado _Empleado;                
         private string _TipoComprobnte;
@@ -20,6 +23,16 @@ namespace comensando_proyecto
             TipoComprobante = parTipoComprobante;
             
                         
+        }
+        public clsVenta(string parTipoComprobante,clsEmpleado parEmpleado)
+        { 
+        TipoComprobante = parTipoComprobante;
+        Empleado = parEmpleado;
+        }
+        public int Id_Venta
+        {
+            get { return _Id_Venta; }
+            set { _Id_Venta = value; }
         }
 
         public clsCliente Cliente
@@ -59,33 +72,28 @@ namespace comensando_proyecto
         }
 
 
-        public void insertar_venta()
+        public void Guardar(List<clsClientesDeVenta> ClienteSeleccionados)
         {
-            SqlConnection conexion;
+            SqlConnection cn = new SqlConnection(mdlVariables.CadenaConexion);
+            SqlCommand cmd = new SqlCommand("usp_Registrar_Venta", cn);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@parTipoComprobante",TipoComprobante);
+            cmd.Parameters.AddWithValue("@parId_Barbero", Empleado.IDEmpleado);
 
-            conexion = new
-            SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            cn.Open();
+            Id_Venta= Convert.ToInt32(cmd.ExecuteScalar());
 
+            foreach (clsClientesDeVenta item in ClienteSeleccionados)
+            {
+                cmd = new SqlCommand("usp_Cliente_venta", cn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@parId_Venta", Id_Venta);
+                cmd.Parameters.AddWithValue("@parId_Cliente", item.Cliente.ID_Cliente);
 
-            SqlCommand comando;
-
-            comando = new SqlCommand("usp_venta_insertar", conexion);
-
-            comando.CommandType = System.Data.CommandType.StoredProcedure;
-
-            comando.Parameters.AddWithValue("@parTipoComprobamte", TipoComprobante);
-            comando.Parameters.AddWithValue("@parIDEmpleado", Empleado.IDEmpleado);
-            comando.Parameters.AddWithValue("@parIDCliemte",Cliente.ID_Cliente);
-            
-
-
-
-
-
-            conexion.Open();
-            comando.ExecuteNonQuery();
-            conexion.Close();
-
+                cmd.ExecuteNonQuery();
+            }
+            cn.Close();
         }
 
 

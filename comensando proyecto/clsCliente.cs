@@ -74,8 +74,12 @@ namespace comensando_proyecto
             ID_Cliente = parID;
           
         }
-        
 
+        public clsCliente(string parNombre)
+        {
+            Nombre = parNombre;
+            
+        }
 
         public int ID_Cliente
         {
@@ -187,6 +191,13 @@ namespace comensando_proyecto
         {
             get { return _FechaNacimiento; }
             set { _FechaNacimiento = value; }
+        }
+
+
+        public int Edad
+        {
+            get { return System.DateTime.Now.Year - FechaNacimiento.Year; }
+            
         }
 
         public void Insertar_Cliente()
@@ -368,6 +379,7 @@ namespace comensando_proyecto
             return x;
         }
 
+        
 
     }
 }

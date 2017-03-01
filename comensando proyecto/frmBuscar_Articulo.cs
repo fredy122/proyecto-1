@@ -88,7 +88,7 @@ namespace comensando_proyecto
 
                 ArticuloEncontrado.Clear();
                 int contador = 1;
-                int SumaTotal = 0;
+                //int SumaTotal = 0;
                 foreach (clsArticulo ELEMENTO in clsArticulo.Listar_Articulo_Nombre(txtBuscar.Text))
                 {
 
@@ -103,7 +103,7 @@ namespace comensando_proyecto
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.PrecioVenta.ToString());
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.FechaCompra.ToString());
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Descripcion.ToString());
-                    SumaTotal += ELEMENTO.PrecioVenta;
+                    //SumaTotal += ELEMENTO.PrecioVenta;
 
                     if (contador % 2 == 0)
                     {
