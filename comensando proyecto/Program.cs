@@ -16,7 +16,7 @@ namespace comensando_proyecto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmventana_Principal());
+            Application.Run(new login());
         }
     }
 }

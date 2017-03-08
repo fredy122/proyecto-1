@@ -201,8 +201,8 @@ namespace comensando_proyecto
 
             SqlConnection conexion;
 
-            conexion = new
-            SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion = new  SqlConnection(mdlVariables.CadenaConexion);
+            
 
 
             SqlCommand comando;
@@ -241,7 +241,7 @@ namespace comensando_proyecto
             List<clsArticulo> x = new List<clsArticulo>();
 
             SqlConnection conexion;
-            conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
             SqlCommand comando;
 
@@ -279,7 +279,7 @@ namespace comensando_proyecto
             List<clsArticulo> x = new List<clsArticulo>();
 
             SqlConnection conexion;
-            conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
             SqlCommand comando;
 
@@ -316,7 +316,7 @@ namespace comensando_proyecto
             public void Actualizar_Articulo(clsArticulo NuevosDatos)
             {
                 SqlConnection conexion;
-                conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+                conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
                 SqlCommand comando;
                 comando = new SqlCommand("usp_Articulo_Actualizar", conexion);

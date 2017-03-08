@@ -204,9 +204,8 @@ namespace comensando_proyecto
         {
             
             SqlConnection conexion;
-            
-            conexion = new
-            SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
             
             SqlCommand comando;
@@ -258,7 +257,7 @@ namespace comensando_proyecto
             List<clsCliente> y = new List<clsCliente>();
 
             SqlConnection conexion;
-            conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion =  new SqlConnection(mdlVariables.CadenaConexion);
 
             SqlCommand comando;
             comando = new SqlCommand("usp_Clientes_Listar_Todos", conexion);
@@ -290,8 +289,7 @@ namespace comensando_proyecto
         public void Actualizar_cliente(clsCliente NuevosDatos)
         {
             SqlConnection conexion;
-            conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
-
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
             SqlCommand comando;
             comando = new SqlCommand("usp_Cliente_Actualizar_Datos", conexion);
             comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -314,7 +312,7 @@ namespace comensando_proyecto
             List<clsCliente> x = new List<clsCliente>();
 
             SqlConnection conexion;
-            conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
             
             SqlCommand comando;
@@ -349,7 +347,7 @@ namespace comensando_proyecto
             List<clsCliente> x = new List<clsCliente>();
 
             SqlConnection conexion;
-            conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
 
             SqlCommand comando;

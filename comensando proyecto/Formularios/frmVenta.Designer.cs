@@ -124,6 +124,7 @@
             this.lstvDatosVenta.TabIndex = 0;
             this.lstvDatosVenta.UseCompatibleStateImageBehavior = false;
             this.lstvDatosVenta.View = System.Windows.Forms.View.Details;
+            this.lstvDatosVenta.SelectedIndexChanged += new System.EventHandler(this.lstvDatosVenta_SelectedIndexChanged);
             // 
             // columnHeader1
             // 

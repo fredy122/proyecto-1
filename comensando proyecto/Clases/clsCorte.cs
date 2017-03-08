@@ -47,8 +47,7 @@ namespace comensando_proyecto
         {
             SqlConnection conexion;
 
-            conexion = new
-                SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
 
             SqlCommand comando;
@@ -70,7 +69,7 @@ namespace comensando_proyecto
             List<clsCorte> x = new List<clsCorte>();
 
             SqlConnection conexion;
-            conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
             SqlCommand comando;
             comando = new SqlCommand("usp_Corte_Listar_Todos", conexion);

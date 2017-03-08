@@ -238,9 +238,7 @@ namespace comensando_proyecto
 
             SqlConnection conexion;
 
-            conexion = new
-            SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
-
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
             SqlCommand comando;
 
@@ -272,7 +270,7 @@ namespace comensando_proyecto
             List<clsEmpleado> x = new List<clsEmpleado>();
 
             SqlConnection conexion;
-            conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
             SqlCommand comando;
             comando = new SqlCommand("usp_Empleado_Buscar_PorApellido", conexion);
@@ -308,7 +306,7 @@ namespace comensando_proyecto
             List<clsEmpleado> x = new List<clsEmpleado>();
 
             SqlConnection conexion;
-            conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
             SqlCommand comando;
             comando = new SqlCommand("usp_Empleado_Listar_Todos", conexion);
@@ -340,7 +338,7 @@ namespace comensando_proyecto
         public void Actualizar_empleado(clsEmpleado NuevosDatos)
         {
             SqlConnection conexion;
-            conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            conexion = new SqlConnection(mdlVariables.CadenaConexion);
 
             SqlCommand comando;
             comando = new SqlCommand("usp_empleado_Actualizar_Datos", conexion);
@@ -362,7 +360,7 @@ namespace comensando_proyecto
         {
             clsEmpleado x = null;
             SqlConnection CONEXION;
-            CONEXION = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+            CONEXION = new SqlConnection(mdlVariables.CadenaConexion);
 
             SqlCommand elComando;
             elComando = new SqlCommand("usp_Usuario_Validar_Ingreso", CONEXION);

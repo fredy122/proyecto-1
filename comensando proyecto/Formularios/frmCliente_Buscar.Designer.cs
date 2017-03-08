@@ -45,6 +45,7 @@
             this.btnNuevoCliente = new System.Windows.Forms.Button();
             this.rbDNI = new System.Windows.Forms.RadioButton();
             this.rbApellido = new System.Windows.Forms.RadioButton();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBuscar
@@ -214,6 +215,16 @@
             this.rbApellido.Text = "Apellido";
             this.rbApellido.UseVisualStyleBackColor = true;
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(12, 418);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(109, 23);
+            this.btnImprimir.TabIndex = 12;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // frmBuscarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +232,7 @@
             this.BackgroundImage = global::comensando_proyecto.Properties.Resources.LOGO1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(765, 446);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.rbApellido);
             this.Controls.Add(this.rbDNI);
             this.Controls.Add(this.btnNuevoCliente);
@@ -260,5 +272,6 @@
         private System.Windows.Forms.Button btnNuevoCliente;
         private System.Windows.Forms.RadioButton rbDNI;
         private System.Windows.Forms.RadioButton rbApellido;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

@@ -29,7 +29,13 @@ namespace comensando_proyecto
             set { _LosArticulos = value; }
         }
 
-        
+        private clsArticulo _SeleccionarArticulo;
+
+        public clsArticulo SeleccionarArticulo
+        {
+            get { return _SeleccionarArticulo; }
+            set { _SeleccionarArticulo = value; }
+        }
 
         
 
@@ -96,27 +102,35 @@ namespace comensando_proyecto
             frmBuscar_Articulo x;
             x = new frmBuscar_Articulo();
 
-           
+           //ArticuloSeleccionadoVentas.Add(new clsArticuloDeVenta(LosArticulos[lstvDatosVenta.Select];
 
             x.ShowDialog();
-
+            int sumarPuntos = 0;
             if (x.SeleccionarArticulo == null)
             {
                 MessageBox.Show("La busqueda fue cancelada. ");
             }
             else
             {
-               
-                
-                
 		            int y = lstvDatosVenta.Items.Count;
                     lstvDatosVenta.Items.Add("1");                
                     lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.Nombre);
                     lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.PrecioVenta.ToString());
 
+                   
+
+                       
+                        sumarPuntos = + Convert.ToInt32(x.SeleccionarArticulo.PrecioVenta);
                     
-                        
+
+                    
+	                                                     
             }
+            txtPrecioTotal.Text = sumarPuntos.ToString();
+            
+                
+            
+            
             
         }
 
@@ -137,6 +151,11 @@ namespace comensando_proyecto
         private void cmbBarbero_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lstvDatosVenta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
 
 

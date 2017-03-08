@@ -35,8 +35,11 @@
     <Reference Include="IrisSkin2">
       <HintPath>C:\Users\DjFredy\Downloads\Componentes Graficos Vb2\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +81,12 @@
       <DependentUpon>frmEmpleado_Editar.cs</DependentUpon>
     </Compile>
     <Compile Include="Cadena De Conexion\mdlVariables.cs" />
+    <Compile Include="Formularios\frmReporte_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmReporte_Clientes.Designer.cs">
+      <DependentUpon>frmReporte_Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmventana_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +161,9 @@
     <EmbeddedResource Include="Formularios\frmEmpleado_Editar.resx">
       <DependentUpon>frmEmpleado_Editar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmReporte_Clientes.resx">
+      <DependentUpon>frmReporte_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmventana_Principal.resx">
       <DependentUpon>frmventana_Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,7 +204,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptCliente_Reporte.rdlc" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\clsCliente.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
