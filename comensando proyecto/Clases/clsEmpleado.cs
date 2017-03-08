@@ -226,6 +226,11 @@ namespace comensando_proyecto
             get { return _Contrasena; }
             set { _Contrasena = value; }
         }
+        public int Edad
+        {
+            get { return System.DateTime.Now.Year - FechaNacimiento.Year; }
+
+        }
 
 
         public void Insertar_Empleado()
@@ -353,7 +358,7 @@ namespace comensando_proyecto
             conexion.Close();
 
         }
-        public static clsEmpleado Validar_Credenciales(string parNombres, string parDNI)
+        public static clsEmpleado Validar_Credenciales(string parUsuario, string parContrasena)
         {
             clsEmpleado x = null;
             SqlConnection CONEXION;
@@ -362,8 +367,8 @@ namespace comensando_proyecto
             SqlCommand elComando;
             elComando = new SqlCommand("usp_Usuario_Validar_Ingreso", CONEXION);
             elComando.CommandType = System.Data.CommandType.StoredProcedure;
-            elComando.Parameters.AddWithValue("@parUsuario", parNombres);
-            elComando.Parameters.AddWithValue("@parcontrasena", parDNI);
+            elComando.Parameters.AddWithValue("@parUsuario", parUsuario);
+            elComando.Parameters.AddWithValue("@parcontrasena", parContrasena);
             CONEXION.Open();
             SqlDataReader contenedor;
             contenedor = elComando.ExecuteReader();

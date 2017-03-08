@@ -12,16 +12,26 @@ namespace comensando_proyecto
 {
     public partial class frmVenta : Form
     {
+        private List<clsArticuloDeVenta> _ArticuloSeleccionadoVenta = new List<clsArticuloDeVenta>();
 
-
-        private List<clsClientesDeVenta> _ClienteSeleccionadoVentas = new List<clsClientesDeVenta>();
-
-        public List<clsClientesDeVenta> ClienteSeleccionadoVentas
+        public List<clsArticuloDeVenta> ArticuloSeleccionadoVentas
         {
-            get { return _ClienteSeleccionadoVentas; }
-            set { _ClienteSeleccionadoVentas = value; }
+            get { return _ArticuloSeleccionadoVenta; }
+            set { _ArticuloSeleccionadoVenta = value; }
         }
 
+
+        private List<clsArticulo> _LosArticulos = new List<clsArticulo>();
+
+        public List<clsArticulo> LosArticulos
+        {
+            get { return _LosArticulos; }
+            set { _LosArticulos = value; }
+        }
+
+        
+
+        
 
         private List<clsEmpleado> _Losbarberos = new List<clsEmpleado>();
 
@@ -64,12 +74,15 @@ namespace comensando_proyecto
             x = new frmBuscarClientes();
             x.ShowDialog();
 
+           
             if (x.ClienteSeleccionado == null)
 	        {
 		        MessageBox.Show("La busqueda fue cancelada.");
 	        }
             else
 	        {
+               
+
                 txtNombreCliente.Text = x.ClienteSeleccionado.Nombre;
                 txtApellidoCliente.Text = x.ClienteSeleccionado.Apellido;
                 txtCorreoCliente.Text = x.ClienteSeleccionado.Correo;
@@ -83,6 +96,8 @@ namespace comensando_proyecto
             frmBuscar_Articulo x;
             x = new frmBuscar_Articulo();
 
+           
+
             x.ShowDialog();
 
             if (x.SeleccionarArticulo == null)
@@ -91,14 +106,18 @@ namespace comensando_proyecto
             }
             else
             {
-                
-                int y = lstvDatosVenta.Items.Count;
-                lstvDatosVenta.Items.Add("1");                
-                lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.Nombre);
-                lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.PrecioVenta.ToString());
+               
                 
                 
+		            int y = lstvDatosVenta.Items.Count;
+                    lstvDatosVenta.Items.Add("1");                
+                    lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.Nombre);
+                    lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.PrecioVenta.ToString());
+
+                    
+                        
             }
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -107,7 +126,7 @@ namespace comensando_proyecto
 
             clsVenta nuevaVenta;
             nuevaVenta = new clsVenta(Convert.ToString(cmbTipoComprobante.SelectedItem),Losbarberos[cmbBarbero.SelectedIndex]);
-            nuevaVenta.Guardar(ClienteSeleccionadoVentas);
+            nuevaVenta.Guardar(ArticuloSeleccionadoVentas);
             MessageBox.Show("venta agregada satisfactoriamente.", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             

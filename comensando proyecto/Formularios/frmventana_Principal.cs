@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace comensando_proyecto
 {
-    public partial class ventana_Principal : Form
+    public partial class frmventana_Principal : Form
     {
-        public ventana_Principal()
+        public frmventana_Principal()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace comensando_proyecto
         {
             frmBuscar_Articulo x;
             x = new frmBuscar_Articulo();
-            x.Show();
+            x.ShowDialog();
            
             
         }
@@ -40,7 +40,7 @@ namespace comensando_proyecto
         {
             frmVenta x;
             x = new frmVenta();
-            x.Show();
+            x.ShowDialog();
 
             
         }
@@ -54,7 +54,7 @@ namespace comensando_proyecto
         {
             frmBuscarClientes x;
             x = new frmBuscarClientes();
-            x.Show();
+            x.ShowDialog();
         }
 
         private void cambiarFondoDePantallaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -182,6 +182,20 @@ namespace comensando_proyecto
         {
             frmBuscar_Empleado x;
             x = new frmBuscar_Empleado();
+            x.ShowDialog();
+        }
+
+        private void cajaDiariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCaja x;
+            x = new frmCaja();
+            x.ShowDialog();
+        }
+
+        private void ingresosDeMercaderiasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArticulo_Registrar x;
+            x = new frmArticulo_Registrar();
             x.ShowDialog();
         }
 

@@ -123,12 +123,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::comensando_proyecto.Properties.Resources.LOGO;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(420, 439);
             this.Controls.Add(this.btnNuevoCorte);
             this.Controls.Add(this.btnListarTodos);
             this.Controls.Add(this.lstvDatos);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnModificar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmBuscar_Corte";
             this.Text = "frmBuscar_Corte";
             this.ResumeLayout(false);

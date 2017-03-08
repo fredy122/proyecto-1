@@ -43,7 +43,7 @@
             // 
             this.btnCancelar.Image = global::comensando_proyecto.Properties.Resources._001_05;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(239, 165);
+            this.btnCancelar.Location = new System.Drawing.Point(239, 131);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(76, 34);
             this.btnCancelar.TabIndex = 55;
@@ -55,7 +55,7 @@
             // 
             this.btnGuardar.Image = global::comensando_proyecto.Properties.Resources._001_06;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(144, 165);
+            this.btnGuardar.Location = new System.Drawing.Point(144, 131);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(76, 34);
             this.btnGuardar.TabIndex = 54;
@@ -131,7 +131,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 223);
+            this.BackgroundImage = global::comensando_proyecto.Properties.Resources.LOGO;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(437, 190);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label7);
@@ -141,6 +143,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmEmpleado_Editar";
             this.Text = "frmEmpleado_Editar";
             this.Load += new System.EventHandler(this.frmEmpleado_Editar_Load);

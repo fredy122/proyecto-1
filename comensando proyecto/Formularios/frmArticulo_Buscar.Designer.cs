@@ -30,7 +30,6 @@
         {
             this.lstvDatos = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,7 +55,6 @@
             // 
             this.lstvDatos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6,
@@ -79,45 +77,40 @@
             this.columnHeader1.Text = "N°";
             this.columnHeader1.Width = 39;
             // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Codigo";
-            this.columnHeader2.Width = 92;
-            // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "_Nombre ";
-            this.columnHeader4.Width = 103;
+            this.columnHeader4.Text = "Nombre ";
+            this.columnHeader4.Width = 128;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Marca";
-            this.columnHeader5.Width = 90;
+            this.columnHeader5.Width = 116;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Rubro";
-            this.columnHeader6.Width = 67;
+            this.columnHeader6.Width = 93;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "stock";
-            this.columnHeader8.Width = 56;
+            this.columnHeader8.Width = 50;
             // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Precio Compra";
-            this.columnHeader9.Width = 84;
+            this.columnHeader9.Width = 93;
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "Precio Venta";
-            this.columnHeader10.Width = 77;
+            this.columnHeader10.Width = 86;
             // 
             // columnHeader11
             // 
             this.columnHeader11.Text = "Fecha Compra ";
-            this.columnHeader11.Width = 96;
+            this.columnHeader11.Width = 100;
             // 
             // columnHeader3
             // 
@@ -148,6 +141,7 @@
             this.button2.Text = "Modificar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnBorrar
             // 
@@ -264,7 +258,6 @@
 
         private System.Windows.Forms.ListView lstvDatos;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;

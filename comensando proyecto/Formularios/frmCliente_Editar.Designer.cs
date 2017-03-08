@@ -48,7 +48,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(-7, 0);
+            this.label7.Location = new System.Drawing.Point(12, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 17);
             this.label7.TabIndex = 32;
@@ -169,6 +169,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::comensando_proyecto.Properties.Resources.LOGO;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(406, 221);
             this.Controls.Add(this.txtID_Cliente);
             this.Controls.Add(this.label3);
@@ -183,6 +185,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmEditar_Cliente";
             this.Text = "frmEditar_Cliente";
             this.Load += new System.EventHandler(this.frmEditar_Cliente_Load);

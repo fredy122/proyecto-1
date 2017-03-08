@@ -130,7 +130,7 @@ namespace comensando_proyecto
                         lstvDatos.Items.Add(contador.ToString());
                         lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Nombre);
                         lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Apellido);
-                        lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.FechaNacimiento.ToString());
+                        lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Edad.ToString());
                         lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Correo);
                         lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.DNI);
 

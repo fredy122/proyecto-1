@@ -37,10 +37,10 @@ namespace comensando_proyecto
         {
             try
             {
-                mdliImgresar_Usuario.UsuarioConectado = clsEmpleado.Validar_Credenciales(txtUsuario.Text,
+                mdlVariables.UsuarioConectado = clsEmpleado.Validar_Credenciales(txtUsuario.Text,
                                         txtContraseña.Text);
 
-                if (mdliImgresar_Usuario.UsuarioConectado == null)
+                if (mdlVariables.UsuarioConectado == null)
                 {
                     MessageBox.Show("Usuario y/o clave incorrecto.");
                 }
@@ -51,8 +51,8 @@ namespace comensando_proyecto
                     i = new login();
                     i.Close();
                     
-                    ventana_Principal x;
-                    x = new ventana_Principal();
+                    frmventana_Principal x;
+                    x = new frmventana_Principal();
                     x.ShowDialog();
                 }
             }
@@ -61,6 +61,18 @@ namespace comensando_proyecto
                 MessageBox.Show(mierror.Message);
 
             }
+        }
+
+        private void btnLogin_MouseHover(object sender, EventArgs e)
+        {
+            btnLogin.Size = new Size(92, 35);
+            btnLogin.ForeColor = Color.Red;
+        }
+
+        private void btnLogin_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogin.Size = new Size(89, 32);
+            btnLogin.ForeColor = Color.Black;
         }
     }
 }

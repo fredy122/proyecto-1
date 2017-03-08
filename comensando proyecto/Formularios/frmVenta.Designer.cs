@@ -165,7 +165,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(605, 85);
+            this.label3.Location = new System.Drawing.Point(616, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 9;
@@ -316,7 +316,7 @@
             // 
             this.btnBuscarCliene.Image = global::comensando_proyecto.Properties.Resources.filefind;
             this.btnBuscarCliene.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarCliene.Location = new System.Drawing.Point(703, 71);
+            this.btnBuscarCliene.Location = new System.Drawing.Point(703, 53);
             this.btnBuscarCliene.Name = "btnBuscarCliene";
             this.btnBuscarCliene.Size = new System.Drawing.Size(75, 41);
             this.btnBuscarCliene.TabIndex = 10;
@@ -346,7 +346,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(360, 15);
+            this.label11.Location = new System.Drawing.Point(338, 13);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 13);
             this.label11.TabIndex = 17;
@@ -358,7 +358,7 @@
             this.cmbTipoComprobante.Items.AddRange(new object[] {
             "BOLETA",
             "COMPROBANTE"});
-            this.cmbTipoComprobante.Location = new System.Drawing.Point(480, 10);
+            this.cmbTipoComprobante.Location = new System.Drawing.Point(458, 10);
             this.cmbTipoComprobante.Name = "cmbTipoComprobante";
             this.cmbTipoComprobante.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoComprobante.TabIndex = 18;
@@ -385,6 +385,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmVenta";
             this.Text = "frmVenta";

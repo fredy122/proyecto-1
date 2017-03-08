@@ -47,141 +47,140 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsArticulo.cs" />
-    <Compile Include="clsCliente.cs" />
-    <Compile Include="clsClientesDeVenta.cs" />
-    <Compile Include="clsVenta.cs" />
-    <Compile Include="clsCorte.cs" />
-    <Compile Include="clsEmpleado.cs" />
-    <Compile Include="frmBuscar_Corte.cs">
+    <Compile Include="Clases\clsArticulo.cs" />
+    <Compile Include="Clases\clsCliente.cs" />
+    <Compile Include="Clases\clsArticuloVenta.cs" />
+    <Compile Include="Clases\clsVenta.cs" />
+    <Compile Include="Clases\clsCorte.cs" />
+    <Compile Include="Clases\clsEmpleado.cs" />
+    <Compile Include="Formularios\frmCorte_Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBuscar_Corte.Designer.cs">
-      <DependentUpon>frmBuscar_Corte.cs</DependentUpon>
+    <Compile Include="Formularios\frmCorte_Buscar.Designer.cs">
+      <DependentUpon>frmCorte_Buscar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCorte_Registrar.cs">
+    <Compile Include="Formularios\frmCorte_Registrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCorte_Registrar.Designer.cs">
+    <Compile Include="Formularios\frmCorte_Registrar.Designer.cs">
       <DependentUpon>frmCorte_Registrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditar_Cliente.cs">
+    <Compile Include="Formularios\frmCliente_Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditar_Cliente.Designer.cs">
-      <DependentUpon>frmEditar_Cliente.cs</DependentUpon>
+    <Compile Include="Formularios\frmCliente_Editar.Designer.cs">
+      <DependentUpon>frmCliente_Editar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEmpleado_Editar.cs">
+    <Compile Include="Formularios\frmEmpleado_Editar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEmpleado_Editar.Designer.cs">
+    <Compile Include="Formularios\frmEmpleado_Editar.Designer.cs">
       <DependentUpon>frmEmpleado_Editar.cs</DependentUpon>
     </Compile>
-    <Compile Include="mdliImgresar_Usuario.cs" />
-    <Compile Include="mdlVariables.cs" />
-    <Compile Include="ventana_Principal.cs">
+    <Compile Include="Cadena De Conexion\mdlVariables.cs" />
+    <Compile Include="Formularios\frmventana_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ventana_Principal.Designer.cs">
-      <DependentUpon>ventana_Principal.cs</DependentUpon>
+    <Compile Include="Formularios\frmventana_Principal.Designer.cs">
+      <DependentUpon>frmventana_Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscar_Articulo.cs">
+    <Compile Include="Formularios\frmArticulo_Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBuscar_Articulo.Designer.cs">
-      <DependentUpon>frmBuscar_Articulo.cs</DependentUpon>
+    <Compile Include="Formularios\frmArticulo_Buscar.Designer.cs">
+      <DependentUpon>frmArticulo_Buscar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmArticulo_Registrar.cs">
+    <Compile Include="Formularios\frmArticulo_Registrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmArticulo_Registrar.Designer.cs">
+    <Compile Include="Formularios\frmArticulo_Registrar.Designer.cs">
       <DependentUpon>frmArticulo_Registrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscarClientes.cs">
+    <Compile Include="Formularios\frmCliente_Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBuscarClientes.Designer.cs">
-      <DependentUpon>frmBuscarClientes.cs</DependentUpon>
+    <Compile Include="Formularios\frmCliente_Buscar.Designer.cs">
+      <DependentUpon>frmCliente_Buscar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscar_Empleado.cs">
+    <Compile Include="Formularios\frmEmpledo_Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBuscar_Empleado.Designer.cs">
-      <DependentUpon>frmBuscar_Empleado.cs</DependentUpon>
+    <Compile Include="Formularios\frmEmpledo_Buscar.Designer.cs">
+      <DependentUpon>frmEmpledo_Buscar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCaja.cs">
+    <Compile Include="Formularios\frmCaja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCaja.Designer.cs">
+    <Compile Include="Formularios\frmCaja.Designer.cs">
       <DependentUpon>frmCaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCliente_Registrar.cs">
+    <Compile Include="Formularios\frmCliente_Registrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCliente_Registrar.Designer.cs">
+    <Compile Include="Formularios\frmCliente_Registrar.Designer.cs">
       <DependentUpon>frmCliente_Registrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEmpleado_Registrar.cs">
+    <Compile Include="Formularios\frmEmpleado_Registrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEmpleado_Registrar.Designer.cs">
+    <Compile Include="Formularios\frmEmpleado_Registrar.Designer.cs">
       <DependentUpon>frmEmpleado_Registrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVenta.cs">
+    <Compile Include="Formularios\frmVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVenta.Designer.cs">
+    <Compile Include="Formularios\frmVenta.Designer.cs">
       <DependentUpon>frmVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="Formularios\frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="Formularios\frmInicioSesion.Designer.cs">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBuscar_Corte.resx">
-      <DependentUpon>frmBuscar_Corte.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmCorte_Buscar.resx">
+      <DependentUpon>frmCorte_Buscar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCorte_Registrar.resx">
+    <EmbeddedResource Include="Formularios\frmCorte_Registrar.resx">
       <DependentUpon>frmCorte_Registrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditar_Cliente.resx">
-      <DependentUpon>frmEditar_Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmCliente_Editar.resx">
+      <DependentUpon>frmCliente_Editar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEmpleado_Editar.resx">
+    <EmbeddedResource Include="Formularios\frmEmpleado_Editar.resx">
       <DependentUpon>frmEmpleado_Editar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ventana_Principal.resx">
-      <DependentUpon>ventana_Principal.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmventana_Principal.resx">
+      <DependentUpon>frmventana_Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscar_Articulo.resx">
-      <DependentUpon>frmBuscar_Articulo.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmArticulo_Buscar.resx">
+      <DependentUpon>frmArticulo_Buscar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmArticulo_Registrar.resx">
+    <EmbeddedResource Include="Formularios\frmArticulo_Registrar.resx">
       <DependentUpon>frmArticulo_Registrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarClientes.resx">
-      <DependentUpon>frmBuscarClientes.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmCliente_Buscar.resx">
+      <DependentUpon>frmCliente_Buscar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscar_Empleado.resx">
-      <DependentUpon>frmBuscar_Empleado.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmEmpledo_Buscar.resx">
+      <DependentUpon>frmEmpledo_Buscar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCaja.resx">
+    <EmbeddedResource Include="Formularios\frmCaja.resx">
       <DependentUpon>frmCaja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCliente_Registrar.resx">
+    <EmbeddedResource Include="Formularios\frmCliente_Registrar.resx">
       <DependentUpon>frmCliente_Registrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEmpleado_Registrar.resx">
+    <EmbeddedResource Include="Formularios\frmEmpleado_Registrar.resx">
       <DependentUpon>frmEmpleado_Registrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVenta.resx">
+    <EmbeddedResource Include="Formularios\frmVenta.resx">
       <DependentUpon>frmVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmInicioSesion.resx">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -72,7 +72,7 @@ namespace comensando_proyecto
         }
 
 
-        public void Guardar(List<clsClientesDeVenta> ClienteSeleccionados)
+        public void Guardar(List<clsArticuloDeVenta> ArticuloSeleccionadoVentas)
         {
             SqlConnection cn = new SqlConnection(mdlVariables.CadenaConexion);
             SqlCommand cmd = new SqlCommand("usp_Registrar_Venta", cn);
@@ -83,13 +83,15 @@ namespace comensando_proyecto
             cn.Open();
             Id_Venta= Convert.ToInt32(cmd.ExecuteScalar());
 
-            foreach (clsClientesDeVenta item in ClienteSeleccionados)
+            foreach (clsArticuloDeVenta item in ArticuloSeleccionadoVentas)
             {
-                cmd = new SqlCommand("usp_Cliente_venta", cn);
+                cmd = new SqlCommand("usp_Articulo_venta", cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@parId_Articulo", item.Articulo.IdArticulo);
                 cmd.Parameters.AddWithValue("@parId_Venta", Id_Venta);
-                cmd.Parameters.AddWithValue("@parId_Cliente", item.Cliente.ID_Cliente);
+                
+                
 
                 cmd.ExecuteNonQuery();
             }

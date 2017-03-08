@@ -8,7 +8,7 @@ namespace comensando_proyecto
 {
     public class clsArticulo
     {
-        
+        private int _IdArticulo;
         private string _Nombre;
         private string _Lote;
         private string _Marca;
@@ -59,6 +59,20 @@ namespace comensando_proyecto
 
         }
 
+        public clsArticulo(string parNombre, string parLote, string parMarca,string parTipo)
+        {
+            Nombre = parNombre;
+            Lote = parLote;
+            Marca = parMarca;
+            Tipo = parTipo;
+        }
+
+
+        public int IdArticulo
+        {
+            get { return _IdArticulo; }
+            set { _IdArticulo = value; }
+        }
    
         public string Nombre
         {
@@ -299,7 +313,31 @@ namespace comensando_proyecto
          }
 
 
-            
+            public void Actualizar_Articulo(clsArticulo NuevosDatos)
+            {
+                SqlConnection conexion;
+                conexion = new SqlConnection(@"SERVER=DJFREDY-PC\SISTEMAS;DATABASE=Barber_Shop_03;USER=sa;PWD=ftisland");
+
+                SqlCommand comando;
+                comando = new SqlCommand("usp_Articulo_Actualizar", conexion);
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@parIdArticulo", IdArticulo);
+                comando.Parameters.AddWithValue("@parNombre", NuevosDatos.Nombre);
+                comando.Parameters.AddWithValue("@parLote", NuevosDatos.Lote);
+                comando.Parameters.AddWithValue("@parMarca", NuevosDatos.Marca);
+                comando.Parameters.AddWithValue("@parCantidad", NuevosDatos.Cantidad);
+                comando.Parameters.AddWithValue("@parTipoArticulo", NuevosDatos.Tipo);
+                //comando.Parameters.AddWithValue("@parPrecioCompra", NuevosDatos.PrecioCompra);
+                comando.Parameters.AddWithValue("@parPrecioVenta", NuevosDatos.PrecioVenta);
+                //comando.Parameters.AddWithValue("@parStock", NuevosDatos.Stock);
+
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                conexion.Close();
+
+            }
         
 
     }

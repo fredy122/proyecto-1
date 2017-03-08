@@ -12,6 +12,8 @@ namespace comensando_proyecto
 {
     public partial class frmBuscar_Articulo : Form
     {
+        
+
         private clsArticulo _SeleccionarArticulo;
 
         public clsArticulo SeleccionarArticulo
@@ -71,6 +73,7 @@ namespace comensando_proyecto
 
         private void btnAceptarArticulo_Click(object sender, EventArgs e)
         {
+            
             SeleccionarArticulo = ArticuloEncontrado[lstvDatos.SelectedItems[0].Index];
             Close();
         }
@@ -78,9 +81,9 @@ namespace comensando_proyecto
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
-            if (txtBuscar.TextLength < 3)
+            if (txtBuscar.TextLength < 1)
             {
-                MessageBox.Show("Inserte mas de 2 caracteres para realizar la busqueda.");
+                MessageBox.Show("Inserte algun caracter para realizar la busqueda.");
             }
             else
             {
@@ -121,6 +124,24 @@ namespace comensando_proyecto
             frmArticulo_Registrar x;
             x = new frmArticulo_Registrar();
             x.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmArticulo_Registrar NuevoDatos;
+                NuevoDatos = new frmArticulo_Registrar();
+                NuevoDatos.ArticuloSeleccionado = ArticuloEncontrado[lstvDatos.SelectedItems[0].Index];
+                NuevoDatos.ShowDialog();
+            }
+            catch (Exception error)
+            {
+
+                MessageBox.Show(error.Message);
+               
+
+            }
         }
 
         

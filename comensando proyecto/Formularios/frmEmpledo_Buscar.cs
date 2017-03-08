@@ -55,7 +55,7 @@ namespace comensando_proyecto
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Nombre);
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Apellido);
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.DNI);
-                    lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.FechaNacimiento.ToString());
+                    lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Edad.ToString());
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Correo);
                     if (contador % 2 == 0)
                     {
@@ -112,7 +112,7 @@ namespace comensando_proyecto
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Nombre);
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Apellido);
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.DNI);
-                    lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.FechaNacimiento.ToString());
+                    lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Edad.ToString());
                     lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Correo);
 
 
