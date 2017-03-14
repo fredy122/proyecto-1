@@ -24,8 +24,8 @@ namespace comensando_proyecto
 
         //insertar
         public clsEmpleado (string parDNI,string parNombre,string parApellido,string parTelefono,
-                            string parDireccion, char parSexo,DateTime parFechaNacimiento,string parCorreo,string parUsuario,
-                            string parTipoUsuario,string parContrasena)
+                            string parDireccion, char parSexo,DateTime parFechaNacimiento,string parCorreo
+                            )
         {
             DNI = parDNI;
             Nombre = parNombre;
@@ -35,9 +35,7 @@ namespace comensando_proyecto
             Sexo = parSexo;
             FechaNacimiento = parFechaNacimiento;
             Correo = parCorreo;
-            Usuario = parUsuario;
-            TipoUsuario = parTipoUsuario;
-            Contrasena = parContrasena;
+            
         }
 
         //listar
@@ -112,7 +110,7 @@ namespace comensando_proyecto
                 {
                     throw new Exception("El Nombre No Debe Tener Mas de 50 Caracteres");
                 }
-                _Nombre = value;
+                _Nombre = value.ToUpper();
             }
         }
 
@@ -132,7 +130,7 @@ namespace comensando_proyecto
                 {
                     throw new Exception("El Apellido No Debe Tener Mas de 80 Caracteres");
                 }
-                _Apellido = value;
+                _Apellido = value.ToUpper();
             }
         }
 
@@ -172,7 +170,7 @@ namespace comensando_proyecto
                 {
                     throw new Exception("El Direccion No Debe Tener Mas de 90 Caracteres");
                 }
-                _Direccion = value;
+                _Direccion = value.ToUpper();
             }
         }
 
@@ -204,7 +202,7 @@ namespace comensando_proyecto
                 {
                     throw new Exception("El Correo No Debe Tener Mas de 50 Caracteres");
                 }
-                _Correo = value;
+                _Correo = value.ToUpper();
             }
         }
 
@@ -254,10 +252,31 @@ namespace comensando_proyecto
             comando.Parameters.AddWithValue("@parCorreo", Correo);
             comando.Parameters.AddWithValue("@parSexo", Sexo);
             comando.Parameters.AddWithValue("@parFechaNacimiento", FechaNacimiento);
-            comando.Parameters.AddWithValue("@parUsuarrio",Usuario );
-            comando.Parameters.AddWithValue("@parTipoUsuario",TipoUsuario );
-            comando.Parameters.AddWithValue("@parContrasena", Contrasena);
             
+            if (string.IsNullOrEmpty(Usuario))
+            {
+                comando.Parameters.AddWithValue("@parUsuarrio", DBNull.Value);
+            }
+            else
+            {
+                comando.Parameters.AddWithValue("@parUsuarrio", Usuario);
+            }
+            if (string.IsNullOrEmpty(TipoUsuario))
+            {
+                comando.Parameters.AddWithValue("@parTipoUsuario", DBNull.Value);
+            }
+            else
+            {
+                comando.Parameters.AddWithValue("@parTipoUsuario", TipoUsuario);
+            }
+            if (string.IsNullOrEmpty(Contrasena))
+            {
+                comando.Parameters.AddWithValue("@parContrasena", DBNull.Value);
+            }
+            else
+            {
+                comando.Parameters.AddWithValue("@parContrasena", Contrasena);
+            }
 
             conexion.Open();
             comando.ExecuteNonQuery();

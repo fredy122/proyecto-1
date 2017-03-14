@@ -36,6 +36,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNuevoCorte
@@ -119,13 +120,24 @@
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnModificar.UseVisualStyleBackColor = true;
             // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(294, 415);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 20;
+            this.btnAceptar.Text = "Agregar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
             // frmBuscar_Corte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::comensando_proyecto.Properties.Resources.LOGO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(420, 439);
+            this.ClientSize = new System.Drawing.Size(420, 453);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnNuevoCorte);
             this.Controls.Add(this.btnListarTodos);
             this.Controls.Add(this.lstvDatos);
@@ -134,6 +146,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmBuscar_Corte";
             this.Text = "frmBuscar_Corte";
+            this.Load += new System.EventHandler(this.frmBuscar_Corte_Load);
             this.ResumeLayout(false);
 
         }
@@ -148,5 +161,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnModificar;
+        public System.Windows.Forms.Button btnAceptar;
     }
 }

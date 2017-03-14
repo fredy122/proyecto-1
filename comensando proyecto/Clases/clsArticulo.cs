@@ -88,7 +88,8 @@ namespace comensando_proyecto
                 {
                     throw new Exception("El Nombre no debe quedar nulo o vacio");
                 }
-                _Nombre = value; }
+                _Nombre = value.ToUpper(); }
+                
             }
 
 
@@ -102,7 +103,7 @@ namespace comensando_proyecto
                 {
                     throw new Exception("El lote debe ser  inferior a 30 caracteres.");
                 }
-                _Lote = value;
+                _Lote = value.ToUpper();
             }
         }
 
@@ -120,7 +121,7 @@ namespace comensando_proyecto
                 {
                     throw new Exception("La Marca no debe quedar nulo o vacio");
                 }
-                _Marca = value; 
+                _Marca = value.ToUpper(); 
             }
         }
 
@@ -149,7 +150,7 @@ namespace comensando_proyecto
                 {
                     throw new Exception("el tipo no debe quedar vacio.");
                 }
-                _Tipo = value; 
+                _Tipo = value.ToUpper(); 
             }
         }
 
@@ -184,12 +185,17 @@ namespace comensando_proyecto
             get
             { return _Descripcion; }
             set
-            { _Descripcion = value; }
+            { 
+                _Descripcion = value.ToUpper(); 
+            }
         }
         public DateTime FechaCompra
         {
             get { return _FechaCompra; }
-            set { _FechaCompra = value; }
+            set 
+            {
+                _FechaCompra = value; 
+            }
         }
         
 
@@ -265,6 +271,7 @@ namespace comensando_proyecto
                                              Convert.ToDateTime(contenedor["FechaCompra"]),
                                              Convert.ToInt32(contenedor["Stock"]),
                                              contenedor["Descripcion"].ToString());
+                miobjeto.IdArticulo = Convert.ToInt32(contenedor["IdArticulo"]);
 
                 x.Add(miobjeto);
             }
@@ -304,6 +311,7 @@ namespace comensando_proyecto
                                              Convert.ToDateTime(contenedor["FechaCompra"]),
                                              Convert.ToInt32(contenedor["Stock"]),
                                              contenedor["Descripcion"].ToString());
+                miobjeto.IdArticulo = Convert.ToInt32(contenedor["IdArticulo"]);
 
                 x.Add(miobjeto);
              }

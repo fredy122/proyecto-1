@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace comensando_proyecto
 {
-    public partial class login : Form
+    public partial class frmInicioSesion : Form
     {
-        public login()
+        public frmInicioSesion()
         {
             InitializeComponent();
         }
@@ -22,10 +22,7 @@ namespace comensando_proyecto
             Close();
         }
 
-        private void login_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void txtContraseña_TextChanged(object sender, EventArgs e)
         {
@@ -47,13 +44,12 @@ namespace comensando_proyecto
                 else
                 {
                     MessageBox.Show("Bienvenido a HUANCAYORK.");
-                    login i;
-                    i = new login();
-                    i.Close();
-                    
-                    frmventana_Principal x;
-                    x = new frmventana_Principal();
+
+                    this.Hide();
+                    frmventana_Principal x =new frmventana_Principal();
+                    x.lblMostrarUsuario.Text = txtUsuario.Text;
                     x.ShowDialog();
+
                 }
             }
             catch (Exception mierror)
@@ -73,6 +69,27 @@ namespace comensando_proyecto
         {
             btnLogin.Size = new Size(89, 32);
             btnLogin.ForeColor = Color.Black;
+        }
+
+        private void frmInicioSesion_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void chbMostrarContraseña_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbMostrarContraseña.Checked == true)
+            {
+                if (txtContraseña.PasswordChar == '*')
+                {
+                    txtContraseña.PasswordChar = '\0';
+                }
+            }
+            else
+            {
+                txtContraseña.PasswordChar = '*';
+            }
+            
         }
     }
 }

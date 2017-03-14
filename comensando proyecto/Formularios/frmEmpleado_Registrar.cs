@@ -22,14 +22,15 @@ namespace comensando_proyecto
             clsEmpleado x;
             if (rbM.Checked == true)
             {
-                x = new clsEmpleado(txtDNI.Text, txtNombre.Text, txtApellidos.Text, txtTelefono.Text, txtDireccion.Text, 'M', Convert.ToDateTime(dtpFechaNac.Value), txtCorreo.Text,txtUsuario.Text,cmbTipoUsuario.SelectedItem.ToString(),txtContrasena.Text);
-
+                x = new clsEmpleado(txtDNI.Text, txtNombre.Text, txtApellidos.Text, txtTelefono.Text, txtDireccion.Text, 'M', Convert.ToDateTime(dtpFechaNac.Value), txtCorreo.Text);
             }
             else
             {
-                x = new clsEmpleado(txtDNI.Text, txtNombre.Text, txtApellidos.Text, txtTelefono.Text, txtDireccion.Text, 'F', Convert.ToDateTime(dtpFechaNac.Value), txtCorreo.Text, txtUsuario.Text, cmbTipoUsuario.SelectedItem.ToString(), txtContrasena.Text);
+                x = new clsEmpleado(txtDNI.Text, txtNombre.Text, txtApellidos.Text, txtTelefono.Text, txtDireccion.Text, 'F', Convert.ToDateTime(dtpFechaNac.Value), txtCorreo.Text);
             }
-            
+            x.Usuario = txtUsuario.Text;
+            x.TipoUsuario = cmbTipoUsuario.SelectedIndex.ToString();
+            x.Contrasena = txtContrasena.Text;
             x.Insertar_Empleado();
             MessageBox.Show("Cliente Ingresado", "Aqui que ira", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

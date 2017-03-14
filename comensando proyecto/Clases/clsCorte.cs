@@ -8,6 +8,7 @@ namespace comensando_proyecto
 {
     public class clsCorte
     {
+        private int _Idcorte;       
         private string _Nombre;
         private float _Precio;
 
@@ -17,6 +18,11 @@ namespace comensando_proyecto
             Precio = parPrecio;
         }
 
+        public int Idcorte
+        {
+            get { return _Idcorte; }
+            set { _Idcorte = value; }
+        }
         public string Nombre
         {
             get
@@ -25,7 +31,7 @@ namespace comensando_proyecto
             }
             set
             {
-                _Nombre = value;
+                _Nombre = value.ToUpper();
             }
         }
 
@@ -85,7 +91,8 @@ namespace comensando_proyecto
 
                 clsCorte MiObjeto;
                 MiObjeto = new clsCorte(contenedor["Nombre"].ToString(), Convert.ToSingle(contenedor["Precio"]));
-                                            
+
+                MiObjeto.Idcorte = Convert.ToInt32(contenedor["Idcorte"]);
 
                 x.Add(MiObjeto);
             }

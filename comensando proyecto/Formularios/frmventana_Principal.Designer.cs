@@ -59,6 +59,8 @@
             this.btnReservas = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnArticulos = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblMostrarUsuario = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -354,6 +356,29 @@
             this.btnArticulos.MouseLeave += new System.EventHandler(this.btnArticulos_MouseLeave);
             this.btnArticulos.MouseHover += new System.EventHandler(this.btnArticulos_MouseHover);
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblUsuario.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(527, 65);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(164, 38);
+            this.lblUsuario.TabIndex = 8;
+            this.lblUsuario.Text = "Usuario :";
+            // 
+            // lblMostrarUsuario
+            // 
+            this.lblMostrarUsuario.AutoSize = true;
+            this.lblMostrarUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblMostrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblMostrarUsuario.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMostrarUsuario.Location = new System.Drawing.Point(691, 65);
+            this.lblMostrarUsuario.Name = "lblMostrarUsuario";
+            this.lblMostrarUsuario.Size = new System.Drawing.Size(0, 38);
+            this.lblMostrarUsuario.TabIndex = 9;
+            // 
             // frmventana_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +386,8 @@
             this.BackgroundImage = global::comensando_proyecto.Properties.Resources.LOGO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(817, 695);
+            this.Controls.Add(this.lblMostrarUsuario);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnBarbero);
             this.Controls.Add(this.btnCortes);
             this.Controls.Add(this.btnCierreTurno);
@@ -413,6 +440,8 @@
         private System.Windows.Forms.ToolStripMenuItem reporteDelDiaToolStripMenuItem;
         private System.Windows.Forms.Button btnBarbero;
         private System.Windows.Forms.ToolStripMenuItem cambiarFondoDePantallaToolStripMenuItem;
+        private System.Windows.Forms.Label lblUsuario;
+        public System.Windows.Forms.Label lblMostrarUsuario;
     }
 }
 

@@ -29,16 +29,6 @@ namespace comensando_proyecto
             set { _LosArticulos = value; }
         }
 
-        private clsArticulo _SeleccionarArticulo;
-
-        public clsArticulo SeleccionarArticulo
-        {
-            get { return _SeleccionarArticulo; }
-            set { _SeleccionarArticulo = value; }
-        }
-
-        
-
         private List<clsEmpleado> _Losbarberos = new List<clsEmpleado>();
 
         public List<clsEmpleado> Losbarberos
@@ -78,6 +68,7 @@ namespace comensando_proyecto
         {
             frmBuscarClientes x;
             x = new frmBuscarClientes();
+            x.btnAceptar.Visible = true;
             x.ShowDialog();
 
            
@@ -101,10 +92,11 @@ namespace comensando_proyecto
         {
             frmBuscar_Articulo x;
             x = new frmBuscar_Articulo();
-
-           //ArticuloSeleccionadoVentas.Add(new clsArticuloDeVenta(LosArticulos[lstvDatosVenta.Select];
-
+            x.btnAceptarArticulo.Visible = true;
+            x.label1.Visible = true;
+            x.nudCantidad.Visible = true;
             x.ShowDialog();
+
             int sumarPuntos = 0;
             if (x.SeleccionarArticulo == null)
             {
@@ -112,58 +104,51 @@ namespace comensando_proyecto
             }
             else
             {
+                frmBuscar_Articulo i = new frmBuscar_Articulo();
+
+                clsArticuloDeVenta aux;
+                aux = new clsArticuloDeVenta(x.SeleccionarArticulo);
+                ArticuloSeleccionadoVentas.Add(aux); 
 		            int y = lstvDatosVenta.Items.Count;
-                    lstvDatosVenta.Items.Add("1");                
+                    lstvDatosVenta.Items.Add(i.nudCantidad.Value.ToString());                
                     lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.Nombre);
                     lstvDatosVenta.Items[y].SubItems.Add(x.SeleccionarArticulo.PrecioVenta.ToString());
-
-                   
-
-                       
-                        sumarPuntos = + Convert.ToInt32(x.SeleccionarArticulo.PrecioVenta);
-                    
-
-                    
-	                                                     
+                    sumarPuntos = +Convert.ToInt32(x.SeleccionarArticulo.PrecioVenta);	                                                     
             }
-            txtPrecioTotal.Text = sumarPuntos.ToString();
-            
-                
-            
-            
-            
+            txtPrecioTotal.Text = sumarPuntos.ToString();            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             
-
             clsVenta nuevaVenta;
             nuevaVenta = new clsVenta(Convert.ToString(cmbTipoComprobante.SelectedItem),Losbarberos[cmbBarbero.SelectedIndex]);
             nuevaVenta.Guardar(ArticuloSeleccionadoVentas);
             MessageBox.Show("venta agregada satisfactoriamente.", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            
-
             
         }
 
-        private void cmbBarbero_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnBuscarCorte_Click(object sender, EventArgs e)
         {
+            frmBuscar_Corte i;
+            i = new frmBuscar_Corte();
+            i.btnAceptar.Visible = true;
+            i.ShowDialog();
 
+            if (i.CorteSeleccionado == null)
+            {
+                MessageBox.Show("La busqueda fue cancelada. ");
+            }
+            else
+            {
+                clsArticuloDeVenta auxiliar;
+                auxiliar = new clsArticuloDeVenta(i.CorteSeleccionado);
+                ArticuloSeleccionadoVentas.Add(auxiliar);
+                int y = lstvDatosVenta.Items.Count;
+                lstvDatosVenta.Items.Add("1");
+                lstvDatosVenta.Items[y].SubItems.Add(i.CorteSeleccionado.Nombre);
+                lstvDatosVenta.Items[y].SubItems.Add(i.CorteSeleccionado.Precio.ToString());
+            }
         }
-
-        private void lstvDatosVenta_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-
-
-
-
-
-
-        
     }
 }

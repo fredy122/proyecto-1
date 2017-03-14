@@ -217,6 +217,11 @@
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(60, 20);
             this.nudCantidad.TabIndex = 9;
+            this.nudCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label1
             // 
@@ -273,8 +278,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnListarTods;
-        private System.Windows.Forms.Button btnAceptarArticulo;
-        private System.Windows.Forms.NumericUpDown nudCantidad;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.NumericUpDown nudCantidad;
+        public System.Windows.Forms.Button btnAceptarArticulo;
+        public System.Windows.Forms.Label label1;
     }
 }

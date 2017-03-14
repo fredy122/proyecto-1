@@ -17,10 +17,17 @@ namespace comensando_proyecto
 
         public clsArticuloDeVenta(clsArticulo parArticulo)
         {
+
             Articulo = parArticulo;
 
         }
 
+        public clsArticuloDeVenta(clsCorte parCorte)
+        {
+
+            Corte = parCorte;
+
+        }
         public clsArticulo Articulo
         {
             get { return _Articulo; }
@@ -34,7 +41,7 @@ namespace comensando_proyecto
         public clsCorte Corte
         {
             get { return _Corte; }
-            set { _Corte = value; }
+            set { _Corte = value; } 
         }
         public int Cantidad
         {

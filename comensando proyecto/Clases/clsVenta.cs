@@ -9,15 +9,15 @@ namespace comensando_proyecto
     public class clsVenta
     {
         private int _Id_Venta;
-
         
         private clsCliente _Cliente;
         private clsEmpleado _Empleado;                
         private string _TipoComprobnte;
         
-        public clsVenta(clsCliente parCliente, clsEmpleado parEmpleado, string parTipoComprobante
+        public clsVenta(int parIdVenta,clsCliente parCliente, clsEmpleado parEmpleado, string parTipoComprobante
                           )
         {
+            Id_Venta = parIdVenta;
             Cliente = parCliente;
             Empleado = parEmpleado;
             TipoComprobante = parTipoComprobante;
@@ -88,8 +88,10 @@ namespace comensando_proyecto
                 cmd = new SqlCommand("usp_Articulo_venta", cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@parId_Articulo", item.Articulo.IdArticulo);
                 cmd.Parameters.AddWithValue("@parId_Venta", Id_Venta);
+                cmd.Parameters.AddWithValue("@parId_Articulo", item.Articulo.IdArticulo);
+                cmd.Parameters.AddWithValue("@parId_Corte", item.Corte.Idcorte);
+                
                 
                 
 

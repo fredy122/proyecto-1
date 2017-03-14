@@ -268,10 +268,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Button btnListarTodos;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnNuevoCliente;
         private System.Windows.Forms.RadioButton rbDNI;
         private System.Windows.Forms.RadioButton rbApellido;
         private System.Windows.Forms.Button btnImprimir;
+        public System.Windows.Forms.Button btnAceptar;
     }
 }

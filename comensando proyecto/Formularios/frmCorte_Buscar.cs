@@ -13,17 +13,17 @@ namespace comensando_proyecto
     public partial class frmBuscar_Corte : Form
     {
 
-        private clsCliente _corteSeleccionado;
+        private clsCorte _corteSeleccionado;
 
-        public clsCliente CorteSeleccionado
+        public clsCorte CorteSeleccionado
         {
             get { return _corteSeleccionado; }
             set { _corteSeleccionado = value; }
         }
 
-        private List<clsCliente> _CorteEncontrado = new List<clsCliente>();
+        private List<clsCorte> _CorteEncontrado = new List<clsCorte>();
 
-        public List<clsCliente> CorteEncontrado
+        public List<clsCorte> CorteEncontrado
         {
             get { return _CorteEncontrado; }
             set { _CorteEncontrado = value; }
@@ -38,12 +38,12 @@ namespace comensando_proyecto
         private void btnListarTodos_Click(object sender, EventArgs e)
         {
             lstvDatos.Items.Clear();
-            //CorteEncontrado.Clear();
+            CorteEncontrado.Clear();
             int contador = 1;
             foreach (clsCorte ELEMENTO in clsCorte.Listar_Corte())
             {
-               
 
+                CorteEncontrado.Add(ELEMENTO);
                 lstvDatos.Items.Add(contador.ToString());
                 lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Nombre);
                 lstvDatos.Items[contador - 1].SubItems.Add(ELEMENTO.Precio.ToString());
@@ -63,6 +63,17 @@ namespace comensando_proyecto
             frmCorte_Registrar x;
             x = new frmCorte_Registrar();
             x.ShowDialog();
+        }
+
+        private void frmBuscar_Corte_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            CorteSeleccionado = CorteEncontrado[lstvDatos.SelectedItems[0].Index];
+            Close();
         }
     }
 }

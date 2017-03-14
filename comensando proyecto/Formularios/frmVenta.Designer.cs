@@ -61,6 +61,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbTipoComprobante = new System.Windows.Forms.ComboBox();
+            this.btnBuscarCorte = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -71,15 +73,16 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtCodigo);
-            this.groupBox1.Location = new System.Drawing.Point(12, 54);
+            this.groupBox1.Location = new System.Drawing.Point(11, 75);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(537, 57);
+            this.groupBox1.Size = new System.Drawing.Size(537, 60);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Factura";
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(321, 17);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
@@ -88,7 +91,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(257, 23);
+            this.label1.Location = new System.Drawing.Point(272, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 1;
@@ -104,9 +107,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lstvDatosVenta);
-            this.groupBox2.Location = new System.Drawing.Point(12, 118);
+            this.groupBox2.Location = new System.Drawing.Point(11, 139);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(537, 262);
+            this.groupBox2.Size = new System.Drawing.Size(537, 265);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
@@ -124,7 +127,6 @@
             this.lstvDatosVenta.TabIndex = 0;
             this.lstvDatosVenta.UseCompatibleStateImageBehavior = false;
             this.lstvDatosVenta.View = System.Windows.Forms.View.Details;
-            this.lstvDatosVenta.SelectedIndexChanged += new System.EventHandler(this.lstvDatosVenta_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -144,7 +146,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(605, 23);
+            this.label2.Location = new System.Drawing.Point(604, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 6;
@@ -154,9 +156,9 @@
             // 
             this.btnBuscarProducto.Image = global::comensando_proyecto.Properties.Resources.filefind;
             this.btnBuscarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(703, 10);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(702, 51);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(75, 38);
+            this.btnBuscarProducto.Size = new System.Drawing.Size(75, 41);
             this.btnBuscarProducto.TabIndex = 8;
             this.btnBuscarProducto.Text = "Buscar";
             this.btnBuscarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -166,7 +168,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(616, 67);
+            this.label3.Location = new System.Drawing.Point(615, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 9;
@@ -184,9 +186,9 @@
             this.groupBox3.Controls.Add(this.txtNombreCliente);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(561, 118);
+            this.groupBox3.Location = new System.Drawing.Point(560, 139);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(217, 262);
+            this.groupBox3.Size = new System.Drawing.Size(217, 265);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
@@ -274,7 +276,7 @@
             // 
             // txtPrecioTotal
             // 
-            this.txtPrecioTotal.Location = new System.Drawing.Point(678, 403);
+            this.txtPrecioTotal.Location = new System.Drawing.Point(677, 427);
             this.txtPrecioTotal.Name = "txtPrecioTotal";
             this.txtPrecioTotal.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioTotal.TabIndex = 4;
@@ -282,7 +284,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(641, 406);
+            this.label6.Location = new System.Drawing.Point(640, 430);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 5;
@@ -292,9 +294,9 @@
             // 
             this.button7.Image = global::comensando_proyecto.Properties.Resources._001_18;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(183, 389);
+            this.button7.Location = new System.Drawing.Point(182, 410);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(87, 37);
+            this.button7.Size = new System.Drawing.Size(87, 40);
             this.button7.TabIndex = 12;
             this.button7.Text = "Aceptar";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -305,9 +307,9 @@
             // 
             this.button8.Image = global::comensando_proyecto.Properties.Resources._001_19;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(299, 389);
+            this.button8.Location = new System.Drawing.Point(298, 410);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(87, 37);
+            this.button8.Size = new System.Drawing.Size(87, 40);
             this.button8.TabIndex = 13;
             this.button8.Text = "Cancelar";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -317,9 +319,9 @@
             // 
             this.btnBuscarCliene.Image = global::comensando_proyecto.Properties.Resources.filefind;
             this.btnBuscarCliene.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarCliene.Location = new System.Drawing.Point(703, 53);
+            this.btnBuscarCliene.Location = new System.Drawing.Point(702, 95);
             this.btnBuscarCliene.Name = "btnBuscarCliene";
-            this.btnBuscarCliene.Size = new System.Drawing.Size(75, 41);
+            this.btnBuscarCliene.Size = new System.Drawing.Size(75, 44);
             this.btnBuscarCliene.TabIndex = 10;
             this.btnBuscarCliene.Text = "Buscar";
             this.btnBuscarCliene.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -329,16 +331,15 @@
             // cmbBarbero
             // 
             this.cmbBarbero.FormattingEnabled = true;
-            this.cmbBarbero.Location = new System.Drawing.Point(125, 10);
+            this.cmbBarbero.Location = new System.Drawing.Point(124, 34);
             this.cmbBarbero.Name = "cmbBarbero";
             this.cmbBarbero.Size = new System.Drawing.Size(207, 21);
             this.cmbBarbero.TabIndex = 14;
-            this.cmbBarbero.SelectedIndexChanged += new System.EventHandler(this.cmbBarbero_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 13);
+            this.label5.Location = new System.Drawing.Point(15, 37);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 13);
             this.label5.TabIndex = 15;
@@ -347,7 +348,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(338, 13);
+            this.label11.Location = new System.Drawing.Point(337, 37);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 13);
             this.label11.TabIndex = 17;
@@ -359,10 +360,32 @@
             this.cmbTipoComprobante.Items.AddRange(new object[] {
             "BOLETA",
             "COMPROBANTE"});
-            this.cmbTipoComprobante.Location = new System.Drawing.Point(458, 10);
+            this.cmbTipoComprobante.Location = new System.Drawing.Point(457, 34);
             this.cmbTipoComprobante.Name = "cmbTipoComprobante";
             this.cmbTipoComprobante.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoComprobante.TabIndex = 18;
+            // 
+            // btnBuscarCorte
+            // 
+            this.btnBuscarCorte.Image = global::comensando_proyecto.Properties.Resources.filefind;
+            this.btnBuscarCorte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarCorte.Location = new System.Drawing.Point(702, 6);
+            this.btnBuscarCorte.Name = "btnBuscarCorte";
+            this.btnBuscarCorte.Size = new System.Drawing.Size(75, 42);
+            this.btnBuscarCorte.TabIndex = 19;
+            this.btnBuscarCorte.Text = "Buscar";
+            this.btnBuscarCorte.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarCorte.UseVisualStyleBackColor = true;
+            this.btnBuscarCorte.Click += new System.EventHandler(this.btnBuscarCorte_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(612, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(84, 13);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Buscar Articulo :";
             // 
             // frmVenta
             // 
@@ -370,7 +393,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::comensando_proyecto.Properties.Resources.LOGO1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(779, 438);
+            this.ClientSize = new System.Drawing.Size(780, 462);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.btnBuscarCorte);
             this.Controls.Add(this.cmbTipoComprobante);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label5);
@@ -435,5 +460,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbTipoComprobante;
+        private System.Windows.Forms.Button btnBuscarCorte;
+        private System.Windows.Forms.Label label12;
     }
 }

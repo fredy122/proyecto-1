@@ -31,6 +31,9 @@ namespace comensando_proyecto
         {
             frmBuscar_Articulo x;
             x = new frmBuscar_Articulo();
+            x.nudCantidad.Visible = false;
+            x.btnAceptarArticulo.Visible = false;
+            x.label1.Visible = false;
             x.ShowDialog();
            
             
@@ -147,7 +150,9 @@ namespace comensando_proyecto
 
         private void btnCierreTurno_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmInicioSesion x = new frmInicioSesion();
+            x.ShowDialog();
         }
 
         private void btnCierreTurno_MouseHover(object sender, EventArgs e)
@@ -167,6 +172,7 @@ namespace comensando_proyecto
         {
             frmBuscarClientes x;
             x = new frmBuscarClientes();
+            x.btnAceptar.Visible = false;
             x.ShowDialog();
             
         }
@@ -175,6 +181,7 @@ namespace comensando_proyecto
         {
             frmBuscar_Corte x;
             x = new frmBuscar_Corte();
+            x.btnAceptar.Visible = false;
             x.ShowDialog();
         }
 
@@ -182,6 +189,7 @@ namespace comensando_proyecto
         {
             frmBuscar_Empleado x;
             x = new frmBuscar_Empleado();
+            
             x.ShowDialog();
         }
 

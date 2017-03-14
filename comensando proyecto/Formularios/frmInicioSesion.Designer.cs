@@ -1,6 +1,6 @@
 ﻿namespace comensando_proyecto
 {
-    partial class login
+    partial class frmInicioSesion
     {
         /// <summary>
         /// Required designer variable.
@@ -123,8 +123,9 @@
             this.chbMostrarContraseña.TabIndex = 6;
             this.chbMostrarContraseña.Text = "Mostrar contraseña";
             this.chbMostrarContraseña.UseVisualStyleBackColor = false;
+            this.chbMostrarContraseña.CheckedChanged += new System.EventHandler(this.chbMostrarContraseña_CheckedChanged);
             // 
-            // login
+            // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,11 +143,11 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "login";
+            this.Name = "frmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio Sesion ";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
-            this.Load += new System.EventHandler(this.login_Load);
+            this.Load += new System.EventHandler(this.frmInicioSesion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

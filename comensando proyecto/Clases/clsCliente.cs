@@ -106,7 +106,7 @@ namespace comensando_proyecto
                 {
                     throw new Exception("El Nombre No Debe Tener Mas de 50 Caracteres");
                 }
-                _Nombre = value; 
+                _Nombre = value.ToUpper(); 
             }
         }
         public string Apellido
@@ -125,7 +125,7 @@ namespace comensando_proyecto
                 {
                     throw new Exception("El Apellido No Debe Tener Mas de 80 Caracteres");
                 }
-                _Apellido = value; 
+                _Apellido = value.ToUpper(); 
             }
         }
         public string DNI
@@ -172,7 +172,7 @@ namespace comensando_proyecto
                     throw new Exception("El Correo No Debe Tener Mas de 50 Caracteres");
                 }
                 
-                _Correo = value; 
+                _Correo = value.ToUpper(); 
             }
         }
         public char Sexo
@@ -184,7 +184,10 @@ namespace comensando_proyecto
         public string Ocupacion
         {
             get { return _Ocupacion; }
-            set { _Ocupacion = value; }
+            set 
+            { 
+                _Ocupacion = value.ToUpper(); 
+            }
         }  
 
         public DateTime FechaNacimiento
